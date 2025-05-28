@@ -38,8 +38,6 @@ function App() {
         <div className="row row-cols-4 g-4">
           {render === "Actress" &&
             actresses.map((act) => <Actorcard key={act.id} act={act} />)}
-        </div>
-        <div className="row row-cols-4 g-4">
           {render === "Actor" &&
             actors.map((act) => <Actorcard key={act.id} act={act} />)}
         </div>
