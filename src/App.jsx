@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ActressesCard from "./components/ActressesCard";
 
 function App() {
   const actressesUrl = "https://lanciweb.github.io/demo/api/actresses/";
@@ -18,33 +19,7 @@ function App() {
       <div className="container my-5">
         <div className="row row-cols-4 g-4">
           {actresses.map((act) => (
-            <div key={act.id} className="col">
-              <div className="card h-100">
-                <img
-                  src={act.image}
-                  className="card-img-top h-50"
-                  alt={act.name}
-                ></img>
-                <div className="card-body">
-                  <h5 className="card-title">{act.name}</h5>
-                  <p className="card-text">
-                    <div>
-                      <span>Anno di nascita:</span> {act.birth_year}
-                    </div>
-                    <div>
-                      <span> Nazionalità:</span> {act.nationality}
-                    </div>
-                    <div>
-                      <span> Bio:</span> {act.biography}
-                    </div>
-
-                    <div>
-                      <span>Awards:</span> {act.awards}
-                    </div>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <ActressesCard key={act.id} act={act} />
           ))}
         </div>
       </div>
