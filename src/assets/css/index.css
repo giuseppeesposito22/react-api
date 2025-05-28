@@ -6,3 +6,11 @@ body {
 
   min-height: 100vh;
 }
+
+span {
+  font-weight: bold;
+}
+
+img {
+  object-fit: cover;
+}
